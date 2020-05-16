@@ -1,0 +1,70 @@
+#timer-extension-wrapper{
+    user-select: none;
+    position: absolute;
+    top:0;  
+    width: 400px;
+    height: 250px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer-extension-wrapper-header{
+    cursor:move;
+    padding: 0;
+    font-weight: bold;
+    font-size: 25px;
+    color: #445ff8; 
+    width: 100%;
+    text-align: center;
+}
+
+
+#timer-extension-wrapper #box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#timer-extension-wrapper #time{
+    display: flex;
+}
+
+#timer-extension-wrapper #time input{ 
+    z-index: 9;
+    background: transparent; 
+    font-size: 3rem;
+    color: #445ff8;
+    border-radius: 10px;
+    margin: 0px 5px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    border: none;
+} 
+
+#timer-extension-wrapper button{
+    /* margin: 15px 5px;  */
+    background: transparent;
+    border: none;
+    font-size: x-large;
+    cursor: pointer;
+    padding: 5px 28px;
+    border-radius: 5px;
+}
+
+.hidden{
+    display: none !important
+}
+
+#timer-extension-wrapper svg{
+    fill:#445ff8;
+    max-width: 50px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#timer-extension-wrapper .theme{
+    margin-top: 20px;
+}
