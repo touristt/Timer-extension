@@ -33,7 +33,6 @@ class Timer {
         clearInterval(this.timerId)
     }
     show() {
-        console.log(this.currMins + " : " + this.currSecs)
         minsInput.value = timer.currMins < 10 ? "0" + timer.currMins : timer.currMins
         secsInput.value = timer.currSecs < 10 ? "0" + timer.currSecs : timer.currSecs
     }
