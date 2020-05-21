@@ -24,4 +24,4 @@ You can drag the timer by clicking the Timer header.
 #### hide/show  <kbd>ctrl</kbd><kbd>shift</kbd><kbd>h</kbd>
 #### reset <kbd>ctrl</kbd><kbd>shift</kbd><kbd>q</kbd>
 
-You preferred timer position, time and theme are stored in local storage.
+Your preferred timer position, time and theme will be stored in local storage.
