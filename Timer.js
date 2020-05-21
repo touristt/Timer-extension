@@ -8,7 +8,7 @@ class Timer {
     }
     start() {
         if (this.currMins == 0 && this.currSecs == 0) {
-            pauseBtn.classList.toggle("hidden")
+            pauseBtn.classList.toggle("timer-extension-hidden")
             return
         }
         this.running = true
@@ -22,7 +22,7 @@ class Timer {
             }
             if (this.currMins <= 0 && this.currSecs <= 0) {
                 this.stop()
-                pauseBtn.classList.toggle("hidden")
+                pauseBtn.classList.toggle("timer-extension-hidden")
             }
             this.show()
 
@@ -48,7 +48,7 @@ class Timer {
         this.stop()
         minsInput.disabled = false
         secsInput.disabled = false
-        startBtn.classList.remove("hidden")
+        startBtn.classList.remove("timer-extension-hidden")
         this.currMins = this.mins
         this.currSecs = this.secs
     }

@@ -4,14 +4,14 @@ const mins = localStorage.getItem("mins")
 const secs = localStorage.getItem("secs")
 const theme = localStorage.getItem("theme")
 const timer = new Timer(mins, secs)
-const time = document.querySelector("#time")
-const minsInput = document.querySelector("#mins")
-const secsInput = document.querySelector("#secs")
-const startBtn = document.querySelector("#start")
-const resetBtn = document.querySelector("#reset")
-const pauseBtn = document.querySelector("#pause")
-const dark = document.querySelector("#dark")
-const light = document.querySelector("#light")
+const time = document.querySelector("#timer-extension-time")
+const minsInput = document.querySelector("#timer-extension-mins")
+const secsInput = document.querySelector("#timer-extension-secs")
+const startBtn = document.querySelector("#timer-extension-start")
+const resetBtn = document.querySelector("#timer-extension-reset")
+const pauseBtn = document.querySelector("#timer-extension-pause")
+const dark = document.querySelector("#timer-extension-dark")
+const light = document.querySelector("#timer-extension-light")
 const color = "#202124"
 const timerLeft = localStorage.getItem("timer-left")
 const timerTop = localStorage.getItem("timer-top")
@@ -21,7 +21,7 @@ if (timerLeft && timerTop) {
     wrapper.style.top = timerTop;
 }
 
-location.href.includes("https://leetcode.com/problems/") ? null : wrapper.classList.toggle("hidden")
+location.href.includes("https://leetcode.com/problems/") ? null : wrapper.classList.toggle("timer-extension-hidden")
 
 minsInput.value = timer.mins < 10 ? "0" + timer.mins : timer.mins
 secsInput.value = timer.secs < 10 ? "0" + timer.secs : timer.secs
@@ -41,12 +41,12 @@ const loadSvgs = async () => {
 loadSvgs()
 
 if (theme == "light") {
-    light.classList.add("hidden")
+    light.classList.add("timer-extension-hidden")
     wrapper.style.background = "transparent"
     header.style.background = "white"
 }
 else {
-    dark.classList.add("hidden")
+    dark.classList.add("timer-extension-hidden")
     wrapper.style.background = color
     header.style.background = "#191919"
 }
@@ -68,22 +68,22 @@ const reset = () => {
     secsInput.value = timer.currSecs < 10 ? "0" + timer.currSecs : timer.currSecs
 }
 const toggleClasses = () => {
-    startBtn.classList.toggle("hidden")
-    pauseBtn.classList.toggle("hidden")
+    startBtn.classList.toggle("timer-extension-hidden")
+    pauseBtn.classList.toggle("timer-extension-hidden")
 }
 
 const setDarkTheme = () => {
     localStorage.setItem("theme", "dark")
-    dark.classList.toggle("hidden")
-    light.classList.toggle("hidden")
+    dark.classList.toggle("timer-extension-hidden")
+    light.classList.toggle("timer-extension-hidden")
     wrapper.style.background = color
     header.style.background = "#191919"
 }
 
 const setLightTheme = () => {
     localStorage.setItem("theme", "light")
-    dark.classList.toggle("hidden")
-    light.classList.toggle("hidden")
+    dark.classList.toggle("timer-extension-hidden")
+    light.classList.toggle("timer-extension-hidden")
     wrapper.style.background = "transparent"
     header.style.background = "white"
 }
@@ -113,7 +113,7 @@ secsInput.addEventListener("change", (e) => {
 
 document.onkeyup = function (e) {
     if (e.ctrlKey && e.shiftKey && e.which == 72) {
-        wrapper.classList.toggle("hidden")
+        wrapper.classList.toggle("timer-extension-hidden")
     }
     else if (e.ctrlKey && e.shiftKey && e.which == 32) {
         if (timer.running) pause()
