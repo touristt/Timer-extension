@@ -2,8 +2,7 @@
     user-select: none;
     position: absolute;
     top:0;  
-    width: 400px;
-    height: 250px;  
+    width: 400px;   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +12,7 @@
 
 #timer-extension-wrapper-header{
     cursor:move;
-    padding: 0;
+    padding: 10px 0;
     font-weight: bold;
     font-size: 25px;
     color: #445ff8; 
@@ -22,18 +21,18 @@
 }
 
 
-#timer-extension-wrapper #box{
+#timer-extension-box{
     display: flex;
     align-items: center;
     flex-direction: column;
     z-index: 99999;
 }
 
-#timer-extension-wrapper #time{
+#timer-extension-time{
     display: flex;
 }
 
-#timer-extension-wrapper #time input{ 
+#timer-extension-time input{ 
     z-index: 9;
     background: transparent; 
     font-size: 3rem;
@@ -56,7 +55,7 @@
     border-radius: 5px;
 }
 
-.hidden{
+.timer-extension-hidden{
     display: none !important
 }
 
@@ -65,8 +64,9 @@
     max-width: 50px;
     height: 30px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
-#timer-extension-wrapper .theme{
+#timer-extension-theme{
     margin-top: 20px;
 }
