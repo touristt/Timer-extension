@@ -1,72 +1,77 @@
-#timer-extension-wrapper{
-    user-select: none;
-    position: absolute;
-    top:0;  
-    width: 400px;   
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 999999;
+#timer-extension-wrapper {
+	user-select: none;
+	position: absolute;
+	top: 0;
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 999999;
 }
 
-#timer-extension-wrapper-header{
-    cursor:move;
-    padding: 10px 0;
-    font-weight: bold;
-    font-size: 25px;
-    color: #445ff8; 
-    width: 100%;
-    text-align: center;
+#timer-extension-wrapper-header {
+	cursor: move;
+	font-weight: bold;
+	font-size: 20px;
+	color: #445ff8;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
 }
 
-
-#timer-extension-box{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    z-index: 99999;
+#timer-extension-box {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	z-index: 99999;
 }
 
-#timer-extension-time{
-    display: flex;
+#timer-extension-time {
+	display: flex;
 }
 
-#timer-extension-time input{ 
-    z-index: 9;
-    background: transparent; 
-    font-size: 3rem;
-    color: #445ff8;
-    border-radius: 10px;
-    margin: 0px 5px;
-    padding: 10px;
-    width: 120px;
-    text-align: center;
-    border: none;
-} 
-
-#timer-extension-wrapper button{
-    /* margin: 15px 5px;  */
-    background: transparent;
-    border: none;
-    font-size: x-large;
-    cursor: pointer;
-    padding: 5px 28px;
-    border-radius: 5px;
+#timer-extension-time input {
+	z-index: 9;
+	background: transparent;
+	font-size: 2.5rem;
+	color: #445ff8;
+	border-radius: 10px;
+	margin: 0px 3px;
+	padding: 7px;
+	width: 120px;
+	text-align: center;
+	border: none;
 }
 
-.timer-extension-hidden{
-    display: none !important
+#timer-extension-wrapper button {
+	/* margin: 15px 5px;  */
+	background: transparent;
+	border: none;
+	font-size: x-large;
+	cursor: pointer;
+	padding: 5px 30px;
+	border-radius: 5px;
 }
 
-#timer-extension-wrapper svg{
-    fill:#445ff8;
-    max-width: 50px;
-    height: 30px;
-    cursor: pointer;
-    margin-top: 10px;
+.timer-extension-hidden {
+	display: none !important;
 }
 
-#timer-extension-theme{
-    margin-top: 20px;
+.timer-extension-theme,
+.timer-extension-close {
+	padding: 0 10px;
+}
+
+#timer-extension-wrapper svg {
+	fill: #445ff8;
+	max-width: 50px;
+	height: 25px;
+	cursor: pointer;
+	margin-top: 8px;
+}
+
+#timer-extension-theme {
+	margin-top: 15px;
 }
